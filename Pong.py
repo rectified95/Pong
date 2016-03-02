@@ -99,7 +99,6 @@ def run(ball, paddle_1, paddle_2, disk_hole):
             scoreSurface = score_Font.render(str(scoreLeft)+spaces+str(scoreRight), False, COMMONS.WHITE)
             windowSurface.blit(scoreSurface, (150,80))
            
-            #pygame.display.update(dirty_rectangles)
             pygame.display.update()
             mainCLock.tick(100)
         
