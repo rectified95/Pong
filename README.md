@@ -1,10 +1,13 @@
 # Pong
 Simple Pong game clone in Python (+PyGame lib.)
 
-Controls:\n
-press 'w'/'s' to move the left paddle (player 1) up/down respectively
-press 'up'/'down' arrow keys for the right paddle
+Controls:
 
-press 'r' to reset game state
-press 'q' to quit
+Press W/S to move the left paddle up/down respectively
+
+Press the UP/DOWN arrow keys for the right paddle
+
+Press 'r' to reset game state
+
+Press 'q' to quit
 
