@@ -17,3 +17,7 @@ To run this game from command line using Python's interpreter, you need to have 
 tested on Windows 10 and written using Python 2.7.11.
 
 If you don't feel like installing Python, you might want to check out the compiled executable (created with PyInstaller).
+
+Final note:
+
+Bear in mind that although the game is fully functional, its architecture is a work in progress.
