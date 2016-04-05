@@ -2,13 +2,14 @@ import COMMONS, pygame
 
 class Ball:
 
-    def __init__(self, center, radius, vel, color=(255,255,255)):
+    def __init__(self, center, radius, vel, hole, color=(255,255,255)):
 
         self.radius = radius
         self.x      = center[0]
         self.y      = center[1]
         self.color  = color
         self.vel    = vel
+        self.hole   = hole
 
 
     def move(self):
