@@ -86,7 +86,7 @@ def run():
                 paddle_1.move(1)
             elif paddle_1_up:
                 paddle_1.move(-1)
-            elif paddle_2_down:
+            if paddle_2_down:
                 paddle_2.move(1)
             elif paddle_2_up:
                 paddle_2.move(-1)
@@ -97,7 +97,6 @@ def run():
             if ball.x - ball.radius <= 0: 
                 if ball.y >= paddle_1.y and ball.y <= paddle_1.y + paddle_1.height:
                     ball.vel[0] = -int(math.floor(1.1*ball.vel[0]))
-                    #print ball.vel[0]
                 else:
                     scoreRight += 1
                     in_game = False
@@ -106,7 +105,6 @@ def run():
             elif ball.x + ball.radius >= COMMONS.WINDOWWIDTH:
                 if ball.y >= paddle_2.y and ball.y <= paddle_2.y + paddle_2.height:
                     ball.vel[0] = int(math.floor(-1.1*ball.vel[0]))
-                    #print ball.vel[0]
                 else:
                     scoreLeft += 1
                     in_game = False
@@ -123,8 +121,8 @@ def run():
             pygame.draw.circle(windowSurface, ball.color, (ball.x, ball.y), ball.radius)
             pygame.draw.circle(windowSurface, COMMONS.WHITE, (ball.x, ball.y), ball.radius + 2, ball.radius - DISK_HOLE)
             
-            pygame.draw.rect(windowSurface, paddle_1.color, pygame.Rect(paddle_1.x, paddle_1.y, paddle_1.width, paddle_1.height))
-            pygame.draw.rect(windowSurface, paddle_2.color, pygame.Rect(paddle_2.x, paddle_2.y, paddle_2.width, paddle_2.height))
+            pygame.draw.rect(windowSurface, paddle_1.color, pygame.Rect(paddle_1.x, paddle_1.y + 2, paddle_1.width, paddle_1.height - 4))
+            pygame.draw.rect(windowSurface, paddle_2.color, pygame.Rect(paddle_2.x, paddle_2.y + 2, paddle_2.width, paddle_2.height - 4))
             
             windowSurface.unlock()
 
